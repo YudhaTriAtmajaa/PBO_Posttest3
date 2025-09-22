@@ -117,14 +117,31 @@ Contoh: setStok(int stok) mengisi nilai variabel stok.
 <img width="727" height="102" alt="image" src="https://github.com/user-attachments/assets/c81f00f0-5473-4a82-b853-06a46a5dfdfb" />
 
 
-- Subclass BahanInstant.java
-<img width="841" height="431" alt="image" src="https://github.com/user-attachments/assets/ec305dc8-e698-4882-9e60-91564fd63cb6" />
+# Subclass BahanInstant.java
+- Subclass bernama BahanInstant mewarisi (extends) dari class Bahan. Ini berarti BahanInstant memiliki semua properti dan metode dari Bahan, serta dapat menambahkan properti atau metode baru yang spesifik untuknya. BahanInstant menambahkan properti pribadi (private boolean halal) yang menunjukkan apakah bahan tersebut halal atau tidak.
+- Constructor BahanInstant menerima lima parameter yaitu nama, stok, satuan, kadaluarsa, dan nilai halal. Parameter ini digunakan untuk menginisialisasi objek BahanInstant. Baris super(nama, stok, satuan, kadaluarsa) memanggil constructor dari class Bahan untuk menginisialisasi properti yang diwarisi, sedangkan this.halal = halal menginisialisasi properti halal yang baru ditambahkan di subclass ini.
+
+<img width="841" height="309" alt="Screenshot 2025-09-22 150952" src="https://github.com/user-attachments/assets/3458011e-12aa-421e-9cb1-c9ccf9b5bc16" />
 
 
 
-- Subclass BahanMinuman.java
-<img width="907" height="431" alt="image" src="https://github.com/user-attachments/assets/247af3d2-5e3f-411f-80d5-20f43ef7f931" />
+# Subclass BahanMinuman.java
+- BahanMinuman adalah subclass yang mewarisi sifat-sifat dasar dari class Bahan. Subclass ini tidak hanya mewarisi, tetapi juga menambahkan karakteristik. Properti privat berkarbonasi yang bertipe boolean, yang berfungsi untuk menandai apakah bahan minuman tersebut mengandung karbonasi atau tidak.
+- Constructor menerima nilai untuk nama, stok, satuan, kadaluarsa, dan berkarbonasi, digunakan untuk menginisialisasi objek tersebut. 
+<img width="907" height="309" alt="Screenshot 2025-09-22 151023" src="https://github.com/user-attachments/assets/285b56af-6577-481e-b050-b7714474b3d7" />
 
+# Override
+- Override pada subclass BahanInstant
+- Method overriding pada subclass BahanInstant. Metode info() yang ada di class Bahan ditimpa untuk menambahkan informasi yang spesifik bagi BahanInstant. super.info(), metode ini mengambil deskripsi dasar dari class bahan, lalu menambahkan status "Halal" yang merupakan atribut unik dari subclass ini. Hasilnya adalah sebuah deskripsi yang lebih lengkap dan spesifik, menggabungkan data yang diwarisi dengan data baru.
+
+
+<img width="747" height="138" alt="image" src="https://github.com/user-attachments/assets/a267142e-f58b-46a4-b1dd-303f9103b97a" />
+
+- Override pada subclass BahanMinuman
+- Method overriding pada sebuah subclass BahanMinuman. Metode info() dari class Bahan ditimpa untuk menambahkan informasi yang spesifik. super.info(), metode ini mengambil deskripsi dasar dari class Bahan, lalu menggabungkannya dengan status "Berkarbonasi" yang merupakan atribut unik dari subclass ini. Hasilnya adalah deskripsi yang lebih komprehensif, menggabungkan data yang diwarisi dengan data baru yang relevan.
+
+
+<img width="881" height="161" alt="image" src="https://github.com/user-attachments/assets/14de84ac-5b15-4934-9827-3a7fa792565d" />
 
 
 ## **Tampilan Menu Utama**
